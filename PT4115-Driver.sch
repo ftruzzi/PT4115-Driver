@@ -6935,6 +6935,13 @@ KEMET U / EIA 6032-15</description>
 <rectangle x1="-3.65" y1="-1.2" x2="-3.5" y2="1.2" layer="51"/>
 <rectangle x1="3.5" y1="-1.2" x2="3.65" y2="1.2" layer="51"/>
 <rectangle x1="2.675" y1="-2.125" x2="3.15" y2="2.125" layer="51"/>
+<wire x1="-3.45" y1="2.1" x2="3.45" y2="2.1" width="0.1016" layer="21"/>
+<wire x1="3.45" y1="2.1" x2="3.45" y2="-2.1" width="0.1016" layer="21"/>
+<wire x1="3.45" y1="-2.1" x2="-3.45" y2="-2.1" width="0.1016" layer="21"/>
+<wire x1="-3.45" y1="-2.1" x2="-3.45" y2="2.1" width="0.1016" layer="21"/>
+<rectangle x1="-3.65" y1="-1.2" x2="-3.5" y2="1.2" layer="21"/>
+<rectangle x1="3.5" y1="-1.2" x2="3.65" y2="1.2" layer="21"/>
+<rectangle x1="2.675" y1="-2.125" x2="3.15" y2="2.125" layer="21"/>
 </package>
 <package name="D/7343-31W">
 <description>&lt;b&gt;Chip Capacitor Type KEMET D / EIA 7343-21&lt;/b&gt;&lt;p&gt;

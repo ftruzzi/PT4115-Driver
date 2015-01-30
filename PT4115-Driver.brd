@@ -32,8 +32,8 @@
 <layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
@@ -156,9 +156,9 @@ www.truzzi.me</text>
 <text x="10" y="24" size="1.778" layer="22" font="vector" rot="MR0" align="center">High power
 3-channel
 LED driver v1.0</text>
-<text x="1" y="25.5" size="1.016" layer="21" align="center">V</text>
-<text x="10.2" y="25.5" size="1.016" layer="21" align="center">V</text>
-<text x="19" y="25.5" size="1.016" layer="21" align="center">V</text>
+<text x="1" y="25.5" size="1.016" layer="21" align="center">R</text>
+<text x="10.2" y="25.5" size="1.016" layer="21" align="center">G</text>
+<text x="19" y="25.5" size="1.016" layer="21" align="center">B</text>
 <text x="19.3" y="-2.1" size="1.016" layer="21" align="center">V</text>
 <text x="0.8" y="4.2" size="1.016" layer="21" align="center">V</text>
 <text x="3.1" y="4.2" size="1.016" layer="21" align="center">+</text>
@@ -1404,6 +1404,13 @@ for trimmer refence see : &lt;u&gt;www.electrospec-inc.com/cross_references/trim
 <rectangle x1="-3.65" y1="-1.2" x2="-3.5" y2="1.2" layer="51"/>
 <rectangle x1="3.5" y1="-1.2" x2="3.65" y2="1.2" layer="51"/>
 <rectangle x1="2.675" y1="-2.125" x2="3.15" y2="2.125" layer="51"/>
+<wire x1="-3.45" y1="2.1" x2="3.45" y2="2.1" width="0.1016" layer="21"/>
+<wire x1="3.45" y1="2.1" x2="3.45" y2="-2.1" width="0.1016" layer="21"/>
+<wire x1="3.45" y1="-2.1" x2="-3.45" y2="-2.1" width="0.1016" layer="21"/>
+<wire x1="-3.45" y1="-2.1" x2="-3.45" y2="2.1" width="0.1016" layer="21"/>
+<rectangle x1="-3.65" y1="-1.2" x2="-3.5" y2="1.2" layer="21"/>
+<rectangle x1="3.5" y1="-1.2" x2="3.65" y2="1.2" layer="21"/>
+<rectangle x1="2.675" y1="-2.125" x2="3.15" y2="2.125" layer="21"/>
 </package>
 </packages>
 </library>
@@ -1594,13 +1601,13 @@ for trimmer refence see : &lt;u&gt;www.electrospec-inc.com/cross_references/trim
 </autorouter>
 <elements>
 <element name="IC1" library="PT4115" package="PT4115" value="" x="1.316" y="16.22" smashed="yes" rot="R180">
-<attribute name="NAME" x="0.636" y="14.88" size="0.8128" layer="25" rot="R180"/>
+<attribute name="NAME" x="0.736" y="14.98" size="0.8128" layer="25" rot="R180"/>
 </element>
 <element name="IC2" library="PT4115" package="PT4115" value="" x="10.037" y="16.267" smashed="yes" rot="R180">
 <attribute name="NAME" x="9.457" y="15.027" size="0.8128" layer="25" rot="R180"/>
 </element>
 <element name="IC3" library="PT4115" package="PT4115" value="" x="18.506" y="16.298" smashed="yes" rot="R180">
-<attribute name="NAME" x="17.926" y="14.958" size="0.8128" layer="25" rot="R180"/>
+<attribute name="NAME" x="17.926" y="15.058" size="0.8128" layer="25" rot="R180"/>
 </element>
 <element name="R1" library="SparkFun-Resistors" package="0805" value="0.3" x="-0.163" y="11" smashed="yes">
 <attribute name="PROD_ID" value="RES-11622" x="-0.163" y="11" size="1.778" layer="27" display="off"/>
@@ -1634,7 +1641,7 @@ for trimmer refence see : &lt;u&gt;www.electrospec-inc.com/cross_references/trim
 <attribute name="VALUE" x="5.849" y="14.248" size="0.4064" layer="27" rot="R270"/>
 </element>
 <element name="D2" library="SparkFun-DiscreteSemi" package="SMA-DIODE-KIT" value="" x="12.798" y="14.502" smashed="yes" rot="R270">
-<attribute name="NAME" x="11.849" y="15.288" size="0.8128" layer="25" rot="R270"/>
+<attribute name="NAME" x="12.349" y="15.288" size="0.8128" layer="25" rot="R270"/>
 <attribute name="VALUE" x="14.449" y="14.248" size="0.4064" layer="27" rot="R270"/>
 </element>
 <element name="D3" library="SparkFun-DiscreteSemi" package="SMA-DIODE-KIT" value="" x="21.125" y="14.456" smashed="yes" rot="R270">
@@ -1654,18 +1661,20 @@ for trimmer refence see : &lt;u&gt;www.electrospec-inc.com/cross_references/trim
 <attribute name="VALUE" x="15.51" y="4.76" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="C1" library="rcl" package="D/7343-31R" value="22uF" x="2" y="7" smashed="yes">
-<attribute name="NAME" x="1.25" y="7.6" size="0.8128" layer="25"/>
+<attribute name="NAME" x="1.55" y="6.6" size="0.8128" layer="25"/>
 <attribute name="VALUE" x="-1.65" y="3.425" size="1.27" layer="27"/>
 </element>
 <element name="C2" library="rcl" package="D/7343-31R" value="22uF" x="12" y="7" smashed="yes">
-<attribute name="NAME" x="11.35" y="6.8" size="0.8128" layer="25"/>
+<attribute name="NAME" x="11.25" y="6.6" size="0.8128" layer="25"/>
 <attribute name="VALUE" x="8.35" y="3.425" size="1.27" layer="27"/>
 </element>
 <element name="C3" library="rcl" package="D/7343-31R" value="22uF" x="20" y="6" smashed="yes" rot="R90">
-<attribute name="NAME" x="19.8" y="6.55" size="0.8128" layer="25" rot="R270"/>
+<attribute name="NAME" x="19.15" y="5.6" size="0.8128" layer="25"/>
 <attribute name="VALUE" x="23.575" y="2.35" size="1.27" layer="27" rot="R90"/>
 </element>
-<element name="J1" library="SparkFun-Connectors" package="SCREWTERMINAL-3.5MM-2" value="M023.5MM" x="-1" y="0"/>
+<element name="J1" library="SparkFun-Connectors" package="SCREWTERMINAL-3.5MM-2" value="M023.5MM" x="-1" y="0" smashed="yes">
+<attribute name="VALUE" x="-2.27" y="1.27" size="0.4064" layer="27"/>
+</element>
 <element name="JP5" library="SparkFun-Connectors" package="1X02" value="M02PTH" x="18" y="0" smashed="yes">
 <attribute name="VALUE" x="10.73" y="3.825" size="1.27" layer="27"/>
 </element>
